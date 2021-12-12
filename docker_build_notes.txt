@@ -1,0 +1,6 @@
+docker run --rm repronim/neurodocker:latest generate docker `
+--base debian:stretch `
+--pkg-manager apt `
+--ants version=2.3.1 `
+--miniconda create_env=ants activate=True conda_install="matplotlib" `
+pip_install="nibabel" | docker build -
